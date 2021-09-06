@@ -1,29 +1,31 @@
 let question1 = {
   question: 'Какая игрушка была первой рекламируемой на телевидении?',
   answer: ['a - Миссис Веселая Смешинка ','b - Мистер Картофельная Голова','c - Мисс Пушистая Шапочка','d - Чаки-Чаки'] ,
-  currectAnswer: 'b'
+  currectAnswer: ['b','Мистер Картофельная Голова']
 }
 
 let question2 = {
   question: 'В какой стране производится больше всего кофе в мире?',
   answer: ['a - Индия','b - США','c - Бразилия ','d - Мексика'],
-  currectAnswer: 'c'
+  currectAnswer: ['c', 'Бразилия']
 }
 
 let question3 = {
   question: 'Копрастастафобия - боязнь чего?',
   answer: ['a - Кобр ','b - Запора','c - Устриц ','d - Башен'],
-  currectAnswer: 'b'
+  currectAnswer: ['b', 'Запора']
 }
 
 let question4 = {
   question: 'Как еще называют День Благодарения?',
   answer: ['a - День благодарности','b - Благодарственный день ','c - День индейки','d - Благодарность Индии '],
-  currectAnswer: 'c'
+  currectAnswer : ['c','День индейки']
 }
 
 let num,
     score;
 let arrayQuest = [question1, question2, question3, question4];
 
-console.log(question4.answer);
+for (let question of arrayQuest) {
+	if(question.currectAnswer[0] == 'c') console.log(question.currectAnswer[1]);
+}
