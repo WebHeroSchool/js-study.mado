@@ -26,6 +26,9 @@ let num,
     score;
 let arrayQuest = [question1, question2, question3, question4];
 
-for (let question of arrayQuest) {
-	if(question.currectAnswer[0] == 'c') console.log(question.currectAnswer[1]);
+alert('Добро пожаловать на нашу викторину! В поле для ответа оставляйте лишь букву предполагаемого правильного ответа!')
+for (let i=0; i<arrayQuest.length; i++){
+  let myAnswer = prompt(arrayQuest[i].question, arrayQuest[i].answer);
+  if (myAnswer == arrayQuest[i].currectAnswer[0]) alert('Верно')
+  else alert('Не верно');
 }
