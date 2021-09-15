@@ -27,8 +27,12 @@ let num,
 let arrayQuest = [question1, question2, question3, question4];
 
 alert('Добро пожаловать на нашу викторину! В поле для ответа оставляйте лишь букву предполагаемого правильного ответа!')
-for (let i=0; i<arrayQuest.length; i++){
-  let myAnswer = prompt(arrayQuest[i].question, arrayQuest[i].answer);
-  if (myAnswer == arrayQuest[i].currectAnswer[0]) alert('Верно')
+function buildQuiz(q) {
+  for (let i=0; i<q.length; i++){
+  let myAnswer = prompt(q[i].question, q[i].answer);
+  if (myAnswer == q[i].currectAnswer[0]) alert('Верно')
   else alert('Не верно');
 }
+}
+
+buildQuiz(arrayQuest);
