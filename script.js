@@ -22,17 +22,17 @@ let question4 = {
   currectAnswer : ['c','День индейки']
 }
 
-let num,
-    score;
+let score = 0;
 let arrayQuest = [question1, question2, question3, question4];
 
 alert('Добро пожаловать на нашу викторину! В поле для ответа оставляйте лишь букву предполагаемого правильного ответа!')
 function buildQuiz(q) {
   for (let i=0; i<q.length; i++){
   let myAnswer = prompt(q[i].question +'\n'+ q[i].answer);
-  if (myAnswer == q[i].currectAnswer[0]) alert('Верно')
-  else alert('Не верно');
-}
+  if (myAnswer == q[i].currectAnswer[0]) score++;
+  }
+  return score;
 }
 
-buildQuiz(arrayQuest);
+const message = document.querySelector('.score');
+message.innerHTML = 'Кол-во верных ответов = ' + buildQuiz(arrayQuest);
